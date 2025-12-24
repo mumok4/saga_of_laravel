@@ -257,3 +257,80 @@ body {
 .data-table tbody tr:last-child td {
     border-bottom: none;
 }
+
+.tag {
+    display: inline-block;
+    background-color: rgba(129, 140, 248, 0.15);
+    color: var(--color-accent-hover);
+    border: 1px solid var(--color-border);
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 0.85em;
+    font-weight: 500;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+nav[role="navigation"] svg {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+nav[role="navigation"] > div:first-child {
+    display: none;
+}
+
+nav[role="navigation"] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+nav[role="navigation"] > div:last-child {
+    width: 100%;
+}
+
+nav[role="navigation"] > div:last-child > div:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+nav[role="navigation"] a, 
+nav[role="navigation"] span[aria-current="page"] span,
+nav[role="navigation"] span[aria-disabled="true"] span {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: var(--border-radius-md);
+    text-decoration: none;
+    min-width: 36px;
+    transition: var(--transition-base);
+}
+
+nav[role="navigation"] a:hover {
+    color: var(--color-text-primary);
+    border-color: var(--color-accent);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+nav[role="navigation"] span[aria-current="page"] span {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #111827;
+    font-weight: bold;
+}
+
+nav[role="navigation"] p.text-sm {
+    display: none;
+}

@@ -7,8 +7,9 @@
         <nav class="nav-menu">
             <ul>
                 <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">Главная</a></li>
+                <li><a href="{{ route('posts.index') }}" class="{{ request()->routeIs('posts.*') ? 'active' : '' }}">Посты</a></li>
                 <li><a href="{{ route('feedback.form') }}" class="{{ request()->routeIs('feedback.form') ? 'active' : '' }}">Обратная связь</a></li>
-                <li><a href="{{ route('feedback.data') }}" class="{{ request()->routeIs('feedback.data') ? 'active' : '' }}">Данные</a></li>
+                <li><a href="{{ route('feedback.data') }}" class="{{ request()->routeIs('feedback.data') ? 'active' : '' }}">Данные (Feedback)</a></li>
             </ul>
         </nav>
     </div>
